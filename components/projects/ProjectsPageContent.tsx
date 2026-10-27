@@ -1,7 +1,10 @@
+
 "use client";
 
 import { useState } from "react";
-import ProjectFilters, { type ProjectCategory } from "./ProjectFilters";
+import ProjectFilters, {
+  type ProjectCategory,
+} from "./ProjectFilters";
 import ProjectCard from "./ProjectCard";
 import ProjectsPagination from "./ProjectsPagination";
 import { projectsData } from "./ProjectsData";
@@ -9,7 +12,8 @@ import { projectsData } from "./ProjectsData";
 const PROJECTS_PER_PAGE = 6;
 
 export default function ProjectsPageContent() {
-  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
+  const [activeCategory, setActiveCategory] =
+    useState<ProjectCategory>("all");
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -17,13 +21,23 @@ export default function ProjectsPageContent() {
   const filteredProjects =
     activeCategory === "all"
       ? projectsData
-      : projectsData.filter(project => project.category === activeCategory);
+      : projectsData.filter(
+          (project) => project.category === activeCategory,
+        );
 
   // محاسبه تعداد صفحات
-  const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
+  const totalPages = Math.ceil(
+    filteredProjects.length / PROJECTS_PER_PAGE,
+  );
 
-  // نمایش پروژه‌های صفحه جاری
-  const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+  // جلوگیری از نمایش شماره صفحه نامعتبر
+  const safeCurrentPage =
+    totalPages === 0
+      ? 1
+      : Math.min(Math.max(currentPage, 1), totalPages);
+
+  // انتخاب پروژه‌های صفحه جاری
+  const startIndex = (safeCurrentPage - 1) * PROJECTS_PER_PAGE;
 
   const currentProjects = filteredProjects.slice(
     startIndex,
@@ -38,7 +52,14 @@ export default function ProjectsPageContent() {
 
   // تغییر صفحه
   const handlePageChange = (page: number) => {
-    if (page < 1 || page > totalPages) return;
+    if (
+      !Number.isInteger(page) ||
+      page < 1 ||
+      page > totalPages ||
+      page === safeCurrentPage
+    ) {
+      return;
+    }
 
     setCurrentPage(page);
 
@@ -53,13 +74,11 @@ export default function ProjectsPageContent() {
       dir="rtl"
       className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-10"
     >
-      {/* فیلتر دسته‌بندی */}
       <ProjectFilters
         activeCategory={activeCategory}
         onCategoryChange={handleCategoryChange}
       />
 
-      {/* تعداد پروژه‌ها و شماره صفحه */}
       <div id="projects-list" className="scroll-mt-28 pt-8">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-slate-500">
@@ -69,15 +88,14 @@ export default function ProjectsPageContent() {
             </span>
           </p>
 
-          <p className="text-sm text-slate-500">
-            صفحه {totalPages === 0 ? 0 : currentPage} از {totalPages}
+          <p className="text-sm text-slate-500" aria-live="polite">
+            صفحه {totalPages === 0 ? 0 : safeCurrentPage} از {totalPages}
           </p>
         </div>
 
-        {/* کارت‌های پروژه */}
         {currentProjects.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {currentProjects.map(project => (
+            {currentProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
@@ -86,19 +104,19 @@ export default function ProjectsPageContent() {
             <p className="text-lg font-bold text-[#102a41]">
               پروژه‌ای در این دسته‌بندی وجود ندارد.
             </p>
-
             <p className="mt-2 text-sm text-slate-500">
               دسته‌بندی دیگری را انتخاب کنید.
             </p>
           </div>
         )}
 
-        {/* صفحه‌بندی */}
-        <ProjectsPagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        {totalPages > 1 && (
+          <ProjectsPagination
+            currentPage={safeCurrentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        )}
       </div>
     </section>
   );

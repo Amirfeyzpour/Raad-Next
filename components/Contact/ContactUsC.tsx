@@ -1,6 +1,6 @@
 import Image from "next/image";
-import MapPlace from "./MapPlaceContent";
 import { getImagePath } from "@/lib/images";
+import CompanyMap from "./CompanyMap";
 
 export default function ContactUsC() {
   return (
@@ -47,7 +47,7 @@ export default function ContactUsC() {
 
           {/* نقشه */}
           <div className="min-w-0">
-            <MapPlace />
+           <CompanyMap/>
           </div>
         </div>
       </div>

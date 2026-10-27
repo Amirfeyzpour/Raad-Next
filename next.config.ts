@@ -1,28 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Raad-Next",
+  basePath: isProduction ? "/Raad-Next" : "",
   trailingSlash: true,
-
   images: {
     unoptimized: true,
-  },
-
-  experimental: {
-    agentFeedback: true,
-  },
-
-  cacheComponents: true,
-  partialPrefetching: true,
-
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
 };
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import type { LucideIcon } from "lucide-react";
 import {
   MapPin,
   Phone,
@@ -15,7 +16,22 @@ import {
 } from "lucide-react";
 import { getImagePath } from "@/lib/images";
 
-const contactItems = [
+type ContactDetail = {
+  icon: LucideIcon;
+  label: string;
+  value: string;
+  href?: string;
+};
+
+type ContactItem = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  value?: string;
+  details?: ContactDetail[];
+};
+
+const contactItems: ContactItem[] = [
   {
     icon: MapPin,
     title: "آدرس دفتر",
@@ -118,6 +134,7 @@ export default function ContactUsB() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {contactItems.map(item => {
               const Icon = item.icon;
+              const details = item.details ?? [];
 
               return (
                 <div
@@ -146,7 +163,7 @@ export default function ContactUsB() {
                   </p>
 
                   {/* Main Value */}
-                  {"value" in item && item.value && (
+                  {item.value && (
                     <div className="mt-3 flex items-start gap-2 border-t border-slate-100 pt-3">
                       {item.title === "آدرس دفتر" && (
                         <MapPin
@@ -167,12 +184,12 @@ export default function ContactUsB() {
                       </p>
                     </div>
                   )}
-                
+
                   {/* Additional Details */}
-                  {"details" in item && item.details?.length > 0 && (
+                  {details.length > 0 && (
                     <div className="mt-3 space-y-3">
-                      {item.details.map((detail, index) => {
-                        const DetailIcon = detail.icon || Contact;
+                      {details.map((detail, index) => {
+                        const DetailIcon = detail.icon ?? Contact;
 
                         return (
                           <div

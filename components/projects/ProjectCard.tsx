@@ -1,17 +1,27 @@
 import { MapPin, CalendarDays, ArrowLeft } from "lucide-react";
+import type { Project } from "./ProjectsData";
 
-const getImagePath = path => {
+type ProjectCardProps = {
+  project: Project;
+};
+
+const getImagePath = (path: string | undefined): string => {
   if (!path) return "";
 
-  // پشتیبانی از آدرس کامل تصاویر و مسیرهای داخل public
+  // پشتیبانی از آدرس کامل تصاویر
   if (/^(https?:\/\/|data:|blob:)/i.test(path)) {
     return path;
   }
 
-  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  // مسیر تصاویر در GitHub Pages
+  const basePath = process.env.NODE_ENV === "production" ? "/Raad-Next" : "";
+
+  const cleanPath = path.replace(/^\/+/, "");
+
+  return `${basePath}/${cleanPath}`;
 };
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   const { title, description, location, year, image } = project;
 
   return (
@@ -43,7 +53,7 @@ const ProjectCard = ({ project }) => {
             </span>
           )}
 
-          {year && (
+          {year != null && (
             <span className="flex items-center gap-1.5">
               <CalendarDays size={16} className="shrink-0 text-orange-500" />
               <span>{year}</span>
