@@ -1,26 +1,63 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
+/* فونت وزیرمتن */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* تنظیمات عمومی */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-vazirmatn: "Vazirmatn", Tahoma, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-vazirmatn);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-vazirmatn);
+  font-weight: 400;
+}
+
+/* اعمال فونت روی فرم‌ها و دکمه‌ها */
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-vazirmatn);
+}
+
+/* تنظیمات اسلایدر پروژه‌ها */
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(249 115 21 / 40%);
+  border-radius: 50%;
+  background: #0b1c2a;
+  color: #f97316;
+}
+
+.projects-swiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  background: #9ca3af;
+  opacity: 0.6;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background: #f97316;
+  opacity: 1;
 }
