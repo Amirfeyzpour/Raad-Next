@@ -14,7 +14,7 @@ const ServiceA = () => {
             rgba(2, 28, 43, 0.35) 40%,
             rgba(2, 28, 43, 0.95) 100%
           ),
-          url('${getImagePath("Images/hero-dom.webP")}')
+          url('${getImagePath("Images/hero-dom.webp")}')
         `,
       }}
     >

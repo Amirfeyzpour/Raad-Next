@@ -56,7 +56,7 @@ export const projectsData: Project[] = [
       "انجام عملیات آتشباری و فعالیت‌های معدنی مرتبط با معدن سیمان آبیک.",
     location: "البرز",
     year: null,
-    image: "/Images/project/ابیک.webP",
+    image: "/Images/project/ابیک.webp",
     category: "معادن سیمانی",
   },
   {
@@ -65,7 +65,7 @@ export const projectsData: Project[] = [
     description: "فعالیت‌های معدنی و عملیات مرتبط با معدن سیمان نائین.",
     location: "اصفهان",
     year: null,
-    image: "/Images/project/نایین.webP",
+    image: "/Images/project/نایین.webp",
     category: "معادن سیمانی",
   },
   {
@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
       "پروژه استخراج سنگ‌آهن با ظرفیت اعلام‌شده سه میلیون تن در سال.",
     location: "آذربایجان شرقی",
     year: null,
-    image: "/Images/project/گوی داش.webP",
+    image: "/Images/project/گوی داش.webp",
     category: "معادن سیمانی",
   },
   {
@@ -93,7 +93,7 @@ export const projectsData: Project[] = [
     description: "پروژه معدنی مرتبط با محدوده تیتانیوم کهنوج.",
     location: "کرمان",
     year: null,
-    image: "/Images/project/تیتانیوم کهنوج.webP",
+    image: "/Images/project/تیتانیوم کهنوج.webp",
     category: "عملیات استخراج",
   },
   {
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
     description: "فعالیت‌های معدنی مرتبط با پروژه معدن طلا.",
     location: "ایران",
     year: null,
-    image: "/Images/project/طلای زرترشت.webP",
+    image: "/Images/project/طلای زرترشت.webp",
     category: "عملیات استخراج",
   },
   {
@@ -112,7 +112,7 @@ export const projectsData: Project[] = [
       "اجرای عملیات حفاری و آتشباری مرتبط با مسیر کنارگذر اتوبان اراک.",
     location: "اراک",
     year: null,
-    image: "/Images/project/کنار گذر اراک.webP",
+    image: "/Images/project/کنار گذر اراک.webp",
     category: "عملیات آتشباری",
   },
   {
@@ -121,7 +121,7 @@ export const projectsData: Project[] = [
     description: "عملیات مرتبط با حوضچه سد گتوند.",
     location: "خوزستان",
     year: null,
-    image: "/Images/project/سد گتوند.webP",
+    image: "/Images/project/سد گتوند.webp",
     category: "عملیات حفاری",
   },
   {
@@ -130,7 +130,7 @@ export const projectsData: Project[] = [
     description: "عملیات مرتبط با پروژه سد بالارود.",
     location: "ایران",
     year: null,
-    image: "/Images/project/سد بالارود.webP",
+    image: "/Images/project/سد بالارود.webp",
     category: "عملیات حفاری",
   },
   {
@@ -139,7 +139,7 @@ export const projectsData: Project[] = [
     description: "فعالیت‌های مرتبط با پروژه سد زیویه.",
     location: "کامیاران",
     year: null,
-    image: "/images/projects/project-19.webP",
+    image: "/images/projects/project-19.webp",
     category: "عملیات حفاری",
   },
   {
@@ -148,7 +148,7 @@ export const projectsData: Project[] = [
     description: "فعالیت‌های مرتبط با پروژه سد کارون ۴.",
     location: "خوزستان",
     year: null,
-    image: "/Images/project/سد کارون 4.webP",
+    image: "/Images/project/سد کارون 4.webp",
     category: "عملیات حفاری",
   },
   {
@@ -157,7 +157,7 @@ export const projectsData: Project[] = [
     description: "پروژه انتقال لوله آب از مخزن به منطقه بهاران.",
     location: "کردستان",
     year: null,
-    image: "/Images/project/انتقال آب از مخزن به بهاران.webP",
+    image: "/Images/project/انتقال آب از مخزن به بهاران.webp",
     category: "عملیات حفاری",
   },
   {
@@ -166,7 +166,7 @@ export const projectsData: Project[] = [
     description: "اجرای پروژه لرزه‌نگاری دوبعدی در منطقه اهواز.",
     location: "خوزستان",
     year: null,
-    image: "/Images/project/لرزه نگاری.webP",
+    image: "/Images/project/لرزه نگاری.webp",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -175,7 +175,7 @@ export const projectsData: Project[] = [
     description: "انجام عملیات لرزه‌نگاری در منطقه بینالود.",
     location: "ایران",
     year: null,
-    image: "/Images/project/پروژه لرزه‌نگاری بینالود.webP",
+    image: "/Images/project/پروژه لرزه‌نگاری بینالود.webp",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -184,7 +184,7 @@ export const projectsData: Project[] = [
     description: "پروژه لرزه‌نگاری مرتبط با مسیر خط لوله گاز دامغان–کیاسر.",
     location: "دامغان به کیاسر",
     year: null,
-    image: "/Images/project/خط لوله گاز دامغان–کیاسر.webP",
+    image: "/Images/project/خط لوله گاز دامغان–کیاسر.webp",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -193,7 +193,7 @@ export const projectsData: Project[] = [
     description: "پروژه لرزه‌نگاری مرتبط با خط لوله گاز G6.",
     location: "کرمانشاه",
     year: null,
-    image: "/Images/project/خط لوله گاز G6 کرمانشاه.webP",
+    image: "/Images/project/خط لوله گاز G6 کرمانشاه.webp",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -202,7 +202,7 @@ export const projectsData: Project[] = [
     description: "ساخت ویلای دوبلکس جنگلی با زیربنای اعلام‌شده ۵۰۰ مترمربع.",
     location: "متل‌قو، مازندران",
     year: null,
-    image: "/Images/project/ساختمان سازی شمال.webP",
+    image: "/Images/project/ساختمان سازی شمال.webp",
     category: "ساختمان‌سازی و شهرک‌سازی",
   },
   {
@@ -212,7 +212,7 @@ export const projectsData: Project[] = [
       "صادرات سوخت، سیمان و انواع محصولات فولادی به اقلیم کردستان عراق.",
     location: "عراق",
     year: null,
-    image: "/images/projects/project-36.webP",
+    image: "/images/projects/project-36.webp",
     category: "صادرات و واردات کالا",
   },
   {

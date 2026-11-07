@@ -7,7 +7,7 @@ const specialties = [
     title: "سدسازی و پروژه‌های عمرانی",
     description:
       "اجرای پروژه‌های سدسازی، راه‌سازی و سازه‌های صنعتی با بهره‌گیری از تجهیزات مدرن و تیم متخصص.",
-    image: "Images/Specialties/image-1.webP",
+    image: "Images/Specialties/image-1.webp",
     icon: Waves,
   },
   {
@@ -15,7 +15,7 @@ const specialties = [
     title: "حفاری و آتشباری",
     description:
       "اجرای عملیات حفاری و آتشباری در پروژه‌های معدنی و عمرانی با رعایت استانداردهای ایمنی.",
-    image: "Images/Specialties/image-2.webP",
+    image: "Images/Specialties/image-2.webp",
     icon: Pickaxe,
   },
   {
@@ -23,7 +23,7 @@ const specialties = [
     title: "استخراج و عملیات معدنی",
     description:
       "استخراج و جابه‌جایی مواد معدنی با استفاده از ماشین‌آلات تخصصی و روش‌های اجرایی مناسب.",
-    image: "Images/Specialties/image-3.webP",
+    image: "Images/Specialties/image-3.webp",
     icon: Truck,
   },
   {
@@ -31,7 +31,7 @@ const specialties = [
     title: "اکتشاف و آماده‌سازی پروژه‌ها",
     description:
       "بررسی‌های اولیه، مطالعات زمین‌شناسی و آماده‌سازی محل اجرای پروژه‌ها.",
-    image: "Images/Specialties/image-4.webP",
+    image: "Images/Specialties/image-4.webp",
     icon: Search,
   },
 ];

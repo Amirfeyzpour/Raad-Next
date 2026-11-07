@@ -23,7 +23,7 @@ export default function PmManagment() {
 
             <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-md shadow-slate-900/10">
               <img
-                src={getImagePath("Images/About/sorosh.webP")}
+                src={getImagePath("Images/About/sorosh.webp")}
                 alt="مدیرعامل شرکت رعد گستر سهند"
                 loading="lazy"
                 className="h-70 w-full object-cover object-center sm:h-80 lg:h-88"

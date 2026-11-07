@@ -119,7 +119,7 @@ const Footer = () => {
       <div
         className="relative bg-cover bg-center py-12 sm:py-16"
         style={{
-          backgroundImage: `url("${getImagePath("Images/Footer.webP")}")`,
+          backgroundImage: `url("${getImagePath("Images/Footer.webp")}")`,
         }}
       >
         <div className="absolute inset-0 bg-[#041522]/20" />

@@ -114,7 +114,7 @@ export default function MobileNavbar() {
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url("${getImagePath("Images/Menu-mobil.webP")}")`,
+            backgroundImage: `url("${getImagePath("Images/Menu-mobil.webp")}")`,
           }}
         />
 

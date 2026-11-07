@@ -13,7 +13,7 @@ export default function ContactUsC() {
             {/* تصویر */}
             <div className="relative h-64 shrink-0 overflow-hidden sm:h-72">
               <Image
-                src={getImagePath("Images/Contact.webP")}
+                src={getImagePath("Images/Contact.webp")}
                 alt="فعالیت‌های مهندسی و معدنی رعد گستر سهند"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

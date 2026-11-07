@@ -64,7 +64,7 @@ export default function ProjectsPageContent() {
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url("${getImagePath("/Images/hero-dom-3.webP")}")`,
+            backgroundImage: `url("${getImagePath("/Images/hero-dom-3.webp")}")`,
           }}
         />
 

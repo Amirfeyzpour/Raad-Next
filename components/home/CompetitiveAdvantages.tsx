@@ -38,7 +38,7 @@ export default function CompetitiveAdvantages() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-20 overflow-hidden">
         <img
-          src={getImagePath("Images/image-2.webP")}
+          src={getImagePath("Images/image-2.webp")}
           alt=""
           aria-hidden="true"
           className="h-full w-full object-cover object-[30%_center] sm:object-center"

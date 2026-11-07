@@ -18,7 +18,7 @@ export default function Hero() {
           lg:bg-position-[60%_center]
         "
         style={{
-          backgroundImage: `url("${getImagePath("Images/hero-dom-3.webP")}")`,
+          backgroundImage: `url("${getImagePath("Images/hero-dom-3.webp")}")`,
         }}
       />
 
