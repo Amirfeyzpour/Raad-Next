@@ -2,4 +2,4 @@
 :HL["/Raad-Next/_next/static/media/Vazirmatn%5Bwght%5D-s.p.3knf6dhh8xxk6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"contact","h":96,"c":"$Q2"}]]
-0:{"b":"YAH-RUVao3Zx_nAUrh2MV","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"dPU4Me1ePo_ArqhEFhbh3","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
