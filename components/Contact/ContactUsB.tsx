@@ -237,7 +237,7 @@ export default function ContactUsB() {
             {/* Image */}
             <div className="relative h-56 shrink-0 overflow-hidden sm:h-72 lg:h-72">
               <Image
-                src={getImagePath("Images/hero-dom-3.png")}
+                src={getImagePath("Images/hero-dom-3.webP")}
                 alt="فعالیت‌های صنعتی و عمرانی رعد گستر سهند"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

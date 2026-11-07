@@ -19,7 +19,7 @@ export default function ContactUsA() {
           bg-cover bg-no-repeat bg-center
         "
         style={{
-          backgroundImage: `url('${getImagePath("Images/ContactUs.png")}')`,
+          backgroundImage: `url('${getImagePath("Images/ContactUs.webP")}')`,
         }}
       />
 

@@ -10,7 +10,7 @@ export default function AboutSection() {
       <div
         className="absolute inset-0 -z-20 bg-cover bg-[position:86%_center] sm:bg-center lg:bg-[position:center_55%]"
         style={{
-          backgroundImage: `url("${getImagePath("Images/About/About-us.png")}")`,
+          backgroundImage: `url("${getImagePath("Images/About/About-us.webP")}")`,
         }}
         aria-hidden="true"
       />

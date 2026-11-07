@@ -27,7 +27,7 @@ const activities = [
     description:
       "ارائه خدمات تخصصی در پروژه‌های راه‌سازی، معدنی، سدسازی و خطوط لوله با رعایت الزامات فنی و ایمنی.",
     icon: Pickaxe,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const activities = [
     description:
       "انجام عملیات حفاری با دستگاه‌های پنوماتیک و هیدرولیک متناسب با نیاز پروژه‌های عمرانی و معدنی.",
     icon: Drill,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const activities = [
     description:
       "ارائه خدمات استخراج مواد معدنی و بهره‌برداری از معادن با تکیه بر دانش فنی و تجهیزات تخصصی.",
     icon: Mountain,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const activities = [
     description:
       "اجرای پروژه‌های مرتبط با ساخت انبارک‌ها مطابق ضوابط فنی و الزامات قانونی و ایمنی.",
     icon: Warehouse,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const activities = [
     description:
       "ارائه خدمات لرزه‌نگاری و برداشت داده‌های ژئوفیزیکی برای بررسی ساختارهای زمین‌شناسی و پروژه‌های اکتشافی.",
     icon: Activity,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const activities = [
     description:
       "اجرای پروژه‌های ساختمانی و شهرک‌سازی با تمرکز بر کیفیت، مدیریت منابع و اصول مهندسی.",
     icon: Building2,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 7,
@@ -75,7 +75,7 @@ const activities = [
     description:
       "ارائه خدمات تونل‌سازی و تحکیم زمین با روش‌هایی مانند نصب مش و شاتکریت متناسب با شرایط پروژه.",
     icon: Construction,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
   {
     id: 8,
@@ -83,7 +83,7 @@ const activities = [
     description:
       "ارائه خدمات بازرگانی و جابه‌جایی کالا از مسیرهای زمینی، هوایی و دریایی.",
     icon: Ship,
-    image: "Images/Servieces.png",
+    image: "Images/Servieces.webP",
   },
 ];
 

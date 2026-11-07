@@ -41,7 +41,7 @@ export default function AboutSection2() {
             <div className="absolute -right-2 -top-2 h-20 w-20 rounded-tr-xl border-r-4 border-t-4 border-orange-500 sm:-right-3 sm:-top-3" />
 
             <img
-              src={getImagePath("Images/About/image-1.png")}
+              src={getImagePath("Images/About/image-1.webP")}
               alt="تجهیزات و ماشین‌آلات پروژه‌های رعد گستر سهند"
               className="relative z-10 aspect-4/3 w-full rounded-xl object-cover shadow-xl transition hover:border hover:border-orange-300"
               loading="lazy"

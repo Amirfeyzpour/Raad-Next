@@ -8,7 +8,7 @@ const managementData = [
     subtitle: "غلامرضا سروش نیا",
     description:
       "بیش از ۳۰ سال سابقه فعالیت تخصصی و عضویت در هیئت‌مدیره انجمن صنفی شرکت‌های مهندسی آتشکاری، با تجربه ارزشمند در توسعه و ارتقای این صنعت.",
-    image: "Images/About/sorosh.png",
+    image: "Images/About/sorosh.webP",
     stats: [
       { icon: BriefcaseBusiness, label: "سابقه کاری", value: "—" },
       { icon: GraduationCap, label: "مدرک تحصیلی", value: "—" },
@@ -21,7 +21,7 @@ const managementData = [
     subtitle: "محمدعلی نیل زن",
     description:
       "بیش از ۳۰ سال سابقه فعالیت در حوزه خدمات تخصصی معرفی‌شده و تجربه ارزشمند در کارشناسی و اجرای عملیات ژئوفیزیکی مرتبط با اکتشاف هیدروکربن‌ها.",
-    image: "Images/About/nilzan.png",
+    image: "Images/About/nilzan.webP",
     stats: [
       { icon: BriefcaseBusiness, label: "سابقه کاری", value: "—" },
       { icon: GraduationCap, label: "مدرک تحصیلی", value: "—" },
