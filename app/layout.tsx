@@ -4,9 +4,11 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer/Footer";
 
 export const metadata: Metadata = {
-  title: "رعد گستر سهند | شرکت مهندسی و عمرانی",
-  description:
-    "وب‌سایت رسمی شرکت رعد گستر سهند؛ فعال در حوزه حفاری، آتشباری، معدن و پروژه‌های عمرانی.",
+  title: "رعد گستر سهند",
+  description: "شرکت مهندسی و عمرانی رعد گستر سهند",
+  icons: {
+    icon: "/Logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" data-scroll-behavior="smooth">
       <body suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>

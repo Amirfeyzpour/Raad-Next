@@ -70,17 +70,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <p className="mb-5 line-clamp-3 text-sm leading-7 text-slate-600">
           {description}
         </p>
-
-        {/* جزئیات پروژه */}
-        <div className="flex items-center justify-between border-t border-slate-100 pt-4">
-          <span className="text-sm font-semibold text-slate-700">
-            جزئیات پروژه
-          </span>
-
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#102a41] text-white transition-all duration-300 group-hover:bg-orange-500">
-            <ArrowLeft size={18} />
-          </span>
-        </div>
       </div>
     </article>
   );

@@ -11,17 +11,7 @@ import {
 } from "lucide-react";
 
 import type { LucideIcon } from "lucide-react";
-
-type ProjectCategory =
-  | "all"
-  | "عملیات آتشباری"
-  | "عملیات حفاری"
-  | "عملیات استخراج"
-  | "ساخت انبارک‌های مواد ناریه"
-  | "عملیات لرزه‌نگاری"
-  | "ساختمان‌سازی و شهرک‌سازی"
-  | "اجرای تونل و عملیات تحکیم"
-  | "صادرات و واردات کالا";
+import type { ProjectCategory } from "./ProjectsData";
 
 type ProjectFilter = {
   id: ProjectCategory;
@@ -46,6 +36,11 @@ const filters: ProjectFilter[] = [
     icon: Flame,
   },
   {
+    id: "معادن سیمانی",
+    label: "معادن سیمانی",
+    icon: Building2,
+  },
+  {
     id: "عملیات حفاری",
     label: "عملیات حفاری",
     icon: Drill,
@@ -66,14 +61,14 @@ const filters: ProjectFilter[] = [
     icon: Activity,
   },
   {
-    id: "ساختمان‌سازی و شهرک‌سازی",
-    label: "ساختمان‌سازی و شهرک‌سازی",
-    icon: Building2,
-  },
-  {
     id: "اجرای تونل و عملیات تحکیم",
     label: "اجرای تونل و عملیات تحکیم",
     icon: Route,
+  },
+  {
+    id: "ساختمان‌سازی و شهرک‌سازی",
+    label: "ساختمان‌سازی و شهرک‌سازی",
+    icon: Building2,
   },
   {
     id: "صادرات و واردات کالا",
@@ -81,8 +76,6 @@ const filters: ProjectFilter[] = [
     icon: Package,
   },
 ];
-
-export type { ProjectCategory };
 
 export default function ProjectFilters({
   activeCategory,

@@ -1,18 +1,35 @@
-import type { ProjectCategory } from "./ProjectFilters";
+export type ProjectCategory =
+  | "all"
+  | "عملیات آتشباری"
+  | "معادن سیمانی"
+  | "عملیات حفاری"
+  | "عملیات استخراج"
+  | "ساخت انبارک‌های مواد ناریه"
+  | "عملیات لرزه‌نگاری"
+  | "ساختمان‌سازی و شهرک‌سازی"
+  | "اجرای تونل و عملیات تحکیم"
+  | "صادرات و واردات کالا";
 
-export type Project = {
+export interface Project {
   id: number;
   title: string;
   description: string;
   location: string;
   year: number | null;
   image: string;
-  category: Exclude<ProjectCategory, "all">;
-};
+  category: ProjectCategory;
+  status?: "ongoing" | "completed";
+}
 
-export const projectCategories = [
+export interface ProjectCategoryItem {
+  id: ProjectCategory;
+  label: string;
+}
+
+export const projectCategories: ProjectCategoryItem[] = [
   { id: "all", label: "همه پروژه‌ها" },
   { id: "عملیات آتشباری", label: "عملیات آتشباری" },
+  { id: "معادن سیمانی", label: "معادن سیمانی" },
   { id: "عملیات حفاری", label: "عملیات حفاری" },
   { id: "عملیات استخراج", label: "عملیات استخراج" },
   {
@@ -21,15 +38,15 @@ export const projectCategories = [
   },
   { id: "عملیات لرزه‌نگاری", label: "عملیات لرزه‌نگاری" },
   {
-    id: "ساختمان‌سازی و شهرک‌سازی",
-    label: "ساختمان‌سازی و شهرک‌سازی",
-  },
-  {
     id: "اجرای تونل و عملیات تحکیم",
     label: "اجرای تونل و عملیات تحکیم",
   },
+  {
+    id: "ساختمان‌سازی و شهرک‌سازی",
+    label: "ساختمان‌سازی و شهرک‌سازی",
+  },
   { id: "صادرات و واردات کالا", label: "صادرات و واردات کالا" },
-] as const;
+];
 
 export const projectsData: Project[] = [
   {
@@ -39,8 +56,8 @@ export const projectsData: Project[] = [
       "انجام عملیات آتشباری و فعالیت‌های معدنی مرتبط با معدن سیمان آبیک.",
     location: "البرز",
     year: null,
-    image: "/images/projects/project-01.jpg",
-    category: "عملیات آتشباری",
+    image: "/Images/project/ابیک.jpg",
+    category: "معادن سیمانی",
   },
   {
     id: 2,
@@ -48,8 +65,8 @@ export const projectsData: Project[] = [
     description: "فعالیت‌های معدنی و عملیات مرتبط با معدن سیمان نائین.",
     location: "اصفهان",
     year: null,
-    image: "/images/projects/project-02.jpg",
-    category: "عملیات آتشباری",
+    image: "/Images/project/نایین.jpg",
+    category: "معادن سیمانی",
   },
   {
     id: 3,
@@ -57,8 +74,8 @@ export const projectsData: Project[] = [
     description: "عملیات معدنی مرتبط با مجموعه سیمان سبزوار.",
     location: "خراسان رضوی",
     year: null,
-    image: "/images/projects/project-03.jpg",
-    category: "عملیات آتشباری",
+    image: "/Images/project/سیمان سبزوار.webp",
+    category: "معادن سیمانی",
   },
   {
     id: 4,
@@ -67,26 +84,8 @@ export const projectsData: Project[] = [
       "پروژه استخراج سنگ‌آهن با ظرفیت اعلام‌شده سه میلیون تن در سال.",
     location: "آذربایجان شرقی",
     year: null,
-    image: "/images/projects/project-04.jpg",
-    category: "عملیات استخراج",
-  },
-  {
-    id: 5,
-    title: "عملیات آتشباری معادن",
-    description: "انجام عملیات آتشباری در معادن مناطق مختلف استان فارس.",
-    location: "استان فارس",
-    year: null,
-    image: "/images/projects/project-05.jpg",
-    category: "عملیات آتشباری",
-  },
-  {
-    id: 6,
-    title: "معدن دوگچه فولاد خوزستان",
-    description: "فعالیت معدنی مرتبط با معدن دوگچه.",
-    location: "خوزستان",
-    year: null,
-    image: "/images/projects/project-06.jpg",
-    category: "عملیات استخراج",
+    image: "/Images/project/گوی داش.jpg",
+    category: "معادن سیمانی",
   },
   {
     id: 7,
@@ -94,25 +93,16 @@ export const projectsData: Project[] = [
     description: "پروژه معدنی مرتبط با محدوده تیتانیوم کهنوج.",
     location: "کرمان",
     year: null,
-    image: "/images/projects/project-07.jpg",
+    image: "/Images/project/تیتانیوم کهنوج.jpg",
     category: "عملیات استخراج",
   },
   {
     id: 8,
-    title: "معدن طلای زرتـرشت",
+    title: "معدن طلای زرترشت",
     description: "فعالیت‌های معدنی مرتبط با پروژه معدن طلا.",
     location: "ایران",
     year: null,
-    image: "/images/projects/project-08.jpg",
-    category: "عملیات استخراج",
-  },
-  {
-    id: 9,
-    title: "معدن مس آتین",
-    description: "فعالیت‌های معدنی مرتبط با پروژه معدن مس آتین.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-09.jpg",
+    image: "/Images/project/طلای زرترشت.jpg",
     category: "عملیات استخراج",
   },
   {
@@ -122,45 +112,8 @@ export const projectsData: Project[] = [
       "اجرای عملیات حفاری و آتشباری مرتبط با مسیر کنارگذر اتوبان اراک.",
     location: "اراک",
     year: null,
-    image: "/images/projects/project-10.jpg",
+    image: "/Images/project/کنار گذر اراک.jpg",
     category: "عملیات آتشباری",
-  },
-  {
-    id: 11,
-    title: "جاده حسن‌سالاران به بسطام",
-    description:
-      "عملیات حفاری و آتشباری در مسیر راه‌سازی حسن‌سالاران به بسطام.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-11.jpg",
-    category: "عملیات آتشباری",
-  },
-  {
-    id: 12,
-    title: "مسیر الموت به تنکابن",
-    description: "فعالیت‌های حفاری و آتشباری مرتبط با پروژه راه‌سازی.",
-    location: "الموت به تنکابن",
-    year: null,
-    image: "/images/projects/project-12.jpg",
-    category: "عملیات آتشباری",
-  },
-  {
-    id: 13,
-    title: "سد هفشجان",
-    description: "عملیات اجرایی مرتبط با پروژه سد هفشجان.",
-    location: "هفشجان",
-    year: null,
-    image: "/images/projects/project-13.jpg",
-    category: "عملیات حفاری",
-  },
-  {
-    id: 14,
-    title: "سد قره‌آقاچ سمیرم",
-    description: "فعالیت‌های اجرایی مرتبط با پروژه سد قره‌آقاچ.",
-    location: "سمیرم",
-    year: null,
-    image: "/images/projects/project-14.jpg",
-    category: "عملیات حفاری",
   },
   {
     id: 15,
@@ -168,25 +121,7 @@ export const projectsData: Project[] = [
     description: "عملیات مرتبط با حوضچه سد گتوند.",
     location: "خوزستان",
     year: null,
-    image: "/images/projects/project-15.jpg",
-    category: "عملیات حفاری",
-  },
-  {
-    id: 16,
-    title: "سد پیغام‌جای خوی",
-    description: "فعالیت‌های اجرایی مرتبط با پروژه سد پیغام‌جای خوی.",
-    location: "خوی",
-    year: null,
-    image: "/images/projects/project-16.jpg",
-    category: "عملیات حفاری",
-  },
-  {
-    id: 17,
-    title: "سد چنگوره قزوین",
-    description: "فعالیت‌های مرتبط با پروژه سد چنگوره.",
-    location: "قزوین",
-    year: null,
-    image: "/images/projects/project-17.jpg",
+    image: "/Images/project/سد گتوند.jpg",
     category: "عملیات حفاری",
   },
   {
@@ -195,7 +130,7 @@ export const projectsData: Project[] = [
     description: "عملیات مرتبط با پروژه سد بالارود.",
     location: "ایران",
     year: null,
-    image: "/images/projects/project-18.jpg",
+    image: "/Images/project/سد بالارود.jpg",
     category: "عملیات حفاری",
   },
   {
@@ -208,30 +143,12 @@ export const projectsData: Project[] = [
     category: "عملیات حفاری",
   },
   {
-    id: 20,
-    title: "سد دویرج",
-    description: "فعالیت‌های مرتبط با پروژه سد دویرج.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-20.jpg",
-    category: "عملیات حفاری",
-  },
-  {
     id: 21,
     title: "سد کارون ۴",
     description: "فعالیت‌های مرتبط با پروژه سد کارون ۴.",
     location: "خوزستان",
     year: null,
-    image: "/images/projects/project-21.jpg",
-    category: "عملیات حفاری",
-  },
-  {
-    id: 22,
-    title: "سد امیرآباد رمشت",
-    description: "عملیات مرتبط با پروژه سد امیرآباد رمشت.",
-    location: "کردستان",
-    year: null,
-    image: "/images/projects/project-22.jpg",
+    image: "/Images/project/سد کارون 4.jpg",
     category: "عملیات حفاری",
   },
   {
@@ -240,17 +157,8 @@ export const projectsData: Project[] = [
     description: "پروژه انتقال لوله آب از مخزن به منطقه بهاران.",
     location: "کردستان",
     year: null,
-    image: "/images/projects/project-23.jpg",
+    image: "/Images/project/انتقال آب از مخزن به بهاران.JPG",
     category: "عملیات حفاری",
-  },
-  {
-    id: 24,
-    title: "پروژه لرزه‌نگاری ۱۵ ناحیه",
-    description: "انجام عملیات لرزه‌نگاری در ۱۵ ناحیه.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-24.jpg",
-    category: "عملیات لرزه‌نگاری",
   },
   {
     id: 25,
@@ -258,52 +166,7 @@ export const projectsData: Project[] = [
     description: "اجرای پروژه لرزه‌نگاری دوبعدی در منطقه اهواز.",
     location: "خوزستان",
     year: null,
-    image: "/images/projects/project-25.jpg",
-    category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 26,
-    title: "لرزه‌نگاری سد مشمبا",
-    description: "انجام عملیات لرزه‌نگاری و برداشت اطلاعات در محدوده سد مشمبا.",
-    location: "زنجان",
-    year: null,
-    image: "/images/projects/project-26.jpg",
-    category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 27,
-    title: "پروژه لرزه‌نگاری بار",
-    description: "اجرای عملیات لرزه‌نگاری در منطقه بار.",
-    location: "نیشابور",
-    year: null,
-    image: "/images/projects/project-27.jpg",
-    category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 28,
-    title: "پروژه لرزه‌نگاری بالارود",
-    description: "انجام عملیات لرزه‌نگاری در منطقه بالارود.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-28.jpg",
-    category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 29,
-    title: "پروژه لرزه‌نگاری پاعلم",
-    description: "انجام عملیات لرزه‌نگاری در منطقه پاعلم.",
-    location: "ایران",
-    year: null,
-    image: "/images/projects/project-29.jpg",
-    category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 30,
-    title: "پروژه لرزه‌نگاری پالنگان",
-    description: "انجام عملیات لرزه‌نگاری در منطقه پالنگان.",
-    location: "کردستان",
-    year: null,
-    image: "/images/projects/project-30.jpg",
+    image: "/Images/project/لرزه نگاری.jpg",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -312,7 +175,7 @@ export const projectsData: Project[] = [
     description: "انجام عملیات لرزه‌نگاری در منطقه بینالود.",
     location: "ایران",
     year: null,
-    image: "/images/projects/project-31.jpg",
+    image: "/Images/project/پروژه لرزه‌نگاری بینالود.jpg",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -321,7 +184,7 @@ export const projectsData: Project[] = [
     description: "پروژه لرزه‌نگاری مرتبط با مسیر خط لوله گاز دامغان–کیاسر.",
     location: "دامغان به کیاسر",
     year: null,
-    image: "/images/projects/project-32.jpg",
+    image: "/Images/project/خط لوله گاز دامغان–کیاسر.jpg",
     category: "عملیات لرزه‌نگاری",
   },
   {
@@ -330,18 +193,8 @@ export const projectsData: Project[] = [
     description: "پروژه لرزه‌نگاری مرتبط با خط لوله گاز G6.",
     location: "کرمانشاه",
     year: null,
-    image: "/images/projects/project-33.jpg",
+    image: "/Images/project/خط لوله گاز G6 کرمانشاه.JPG",
     category: "عملیات لرزه‌نگاری",
-  },
-  {
-    id: 34,
-    title: "آپارتمان هشت‌واحدی متل‌قو",
-    description:
-      "پروژه ساختمانی یک آپارتمان هشت‌واحدی در زمینی به مساحت ۴۳۰ مترمربع.",
-    location: "متل‌قو، مازندران",
-    year: null,
-    image: "/images/projects/project-34.jpg",
-    category: "ساختمان‌سازی و شهرک‌سازی",
   },
   {
     id: 35,
@@ -349,7 +202,7 @@ export const projectsData: Project[] = [
     description: "ساخت ویلای دوبلکس جنگلی با زیربنای اعلام‌شده ۵۰۰ مترمربع.",
     location: "متل‌قو، مازندران",
     year: null,
-    image: "/images/projects/project-35.jpg",
+    image: "/Images/project/ساختمان سازی شمال.jpg",
     category: "ساختمان‌سازی و شهرک‌سازی",
   },
   {
@@ -361,6 +214,140 @@ export const projectsData: Project[] = [
     year: null,
     image: "/images/projects/project-36.jpg",
     category: "صادرات و واردات کالا",
+  },
+  {
+    id: 37,
+    title: "معدن سیمان چابهار",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان چابهار.",
+    location: "چابهار، سیستان و بلوچستان",
+    year: null,
+    image: "/Images/project/سیمان چابهار.webp",
+    category: "معادن سیمانی",
+  },
+  {
+    id: 38,
+    title: "معدن سیمان داراب",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان داراب.",
+    location: "داراب، فارس",
+    year: null,
+    image: "/Images/project/سیمان داراب.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 39,
+    title: "معدن سیمان دشتستان",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان دشتستان.",
+    location: "دشتستان، بوشهر",
+    year: null,
+    image: "/Images/project/سیمان دشتسان.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 40,
+    title: "معدن سیمان شمال",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان شمال.",
+    location: "استان تهران",
+    year: null,
+    image: "/Images/project/سیمان شمال.webp",
+    category: "معادن سیمانی",
+  },
+  {
+    id: 41,
+    title: "معدن سیمان غرب",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان غرب.",
+    location: "کرمانشاه",
+    year: null,
+    image: "/Images/project/سیمان غرب.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 42,
+    title: "معدن سیمان صوفیان",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان صوفیان.",
+    location: "صوفیان، آذربایجان شرقی",
+    year: null,
+    image: "/Images/project/سیمان صوفیان.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 43,
+    title: "معدن سیمان فارس نو",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان فارس نو.",
+    location: "استان فارس",
+    year: null,
+    image: "/Images/project/سیمان فارس نو.webp",
+    category: "معادن سیمانی",
+  },
+  {
+    id: 44,
+    title: "معدن سیمان فیروزکوه",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان فیروزکوه.",
+    location: "فیروزکوه، تهران",
+    year: null,
+    image: "/Images/project/سیمان فیروز کوه.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 45,
+    title: "معدن سیمان کردستان",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان کردستان.",
+    location: "استان کردستان",
+    year: null,
+    image: "/Images/project/سیمان کردستان.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 46,
+    title: "معدن سیمان لامرد",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان لامرد.",
+    location: "لامرد، فارس",
+    year: null,
+    image: "/Images/project/سیمان لامرد.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 47,
+    title: "معدن سیمان مارگون",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان مارگون.",
+    location: "کهگیلویه و بویراحمد",
+    year: null,
+    image: "/Images/project/سیمان مارگون.webp",
+    category: "معادن سیمانی",
+  },
+  {
+    id: 48,
+    title: "معدن سیمان منددشتی",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان منددشتی.",
+    location: "استان بوشهر",
+    year: null,
+    image: "/Images/project/سیمان منددشتی.webp",
+    category: "معادن سیمانی",
+    status: "ongoing",
+  },
+  {
+    id: 49,
+    title: "معدن سیمان دورود",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان دورود.",
+    location: "دورود، لرستان",
+    year: null,
+    image: "/Images/project/سیمان دورود.webp",
+    category: "معادن سیمانی",
+  },
+  {
+    id: 50,
+    title: "معدن سیمان نهاوند",
+    description: "عملیات معدنی مرتبط با مجموعه سیمان نهاوند.",
+    location: "نهاوند، همدان",
+    year: null,
+    image: "/Images/project/سیمان نهاوند.webp",
+    category: "معادن سیمانی",
   },
 ];
 

@@ -43,7 +43,7 @@ select {
   border: 2px solid rgb(249 115 21 / 40%);
   border-radius: 50%;
   background: #0b1c2a;
-  color: #f97316;
+  color: #f97316; 
 }
 
 .projects-swiper .swiper-button-prev::after,
