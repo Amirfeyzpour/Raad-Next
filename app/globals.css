@@ -1,15 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* فونت وزیرمتن */
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn[wght].woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* تنظیمات عمومی */
 :root {
   --font-vazirmatn: "Vazirmatn", Tahoma, sans-serif;
