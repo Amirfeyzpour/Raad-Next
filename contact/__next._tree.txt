@@ -1,4 +1,5 @@
-:HL["/Raad-Next/_next/static/chunks/0gv2-83fy1gbk.css","style"]
+:HL["/Raad-Next/_next/static/chunks/1wk_n0h4tpp2m.css","style"]
+:HL["/Raad-Next/_next/static/media/Vazirmatn%5Bwght%5D-s.p.3knf6dhh8xxk6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"contact","h":96,"c":"$Q2"}]]
-0:{"b":"23LxXag7IFdmGkcana3Ef","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"TFaUzAlll7rT903C_lIV-","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
