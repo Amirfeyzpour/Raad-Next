@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -12,7 +13,9 @@ import {
   Send,
   MessageCircle,
 } from "lucide-react";
+
 import { navbarData } from "./navbarData";
+import { getImagePath } from "@/lib/images";
 
 const menuIcons: Record<string, React.ElementType> = {
   "صفحه اصلی": House,
@@ -96,17 +99,18 @@ export default function DesktopNavbar() {
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-6 px-8">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <img
-              src="/Logo.png"
+              src={getImagePath("Logo.png")}
               alt="لوگوی رعد گستر سهند"
               className="h-14 w-14 object-contain"
             />
+
             <h1 className="whitespace-nowrap text-base font-extrabold text-white">
               شرکت رعد گستر سهند
             </h1>
           </Link>
 
           <nav className="flex h-full items-center gap-4 xl:gap-6">
-            {navbarData.map(item => {
+            {navbarData.map((item) => {
               const active = isActive(item.href);
               const Icon = menuIcons[item.title] ?? BriefcaseBusiness;
 
@@ -139,3 +143,4 @@ export default function DesktopNavbar() {
     </header>
   );
 }
+

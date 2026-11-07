@@ -14,7 +14,9 @@ import {
   X,
   Phone,
 } from "lucide-react";
+
 import { navbarData } from "./navbarData";
+import { getImagePath } from "@/lib/images";
 
 const menuIcons: Record<string, React.ElementType> = {
   "صفحه اصلی": House,
@@ -65,10 +67,11 @@ export default function MobileNavbar() {
             className="flex items-center gap-3"
           >
             <img
-              src="/Logo.png"
+              src={getImagePath("Logo.png")}
               alt="رعد گستر سهند"
               className="h-12 w-12 object-contain"
             />
+
             <div>
               <p className="text-sm font-extrabold text-white">رعد گستر سهند</p>
               <p className="mt-1 text-[10px] text-slate-400">
@@ -110,8 +113,11 @@ export default function MobileNavbar() {
       >
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/Images/Menu-mobil.png')" }}
+          style={{
+            backgroundImage: `url("${getImagePath("Images/Menu-mobil.png")}")`,
+          }}
         />
+
         <div className="pointer-events-none absolute inset-0 bg-[#041827]/75" />
 
         <div className="relative flex shrink-0 items-center justify-between border-b border-white/10 px-5 pb-5 pt-[calc(env(safe-area-inset-top)+16px)]">
@@ -121,10 +127,11 @@ export default function MobileNavbar() {
             className="flex items-center gap-3"
           >
             <img
-              src="/Logo.png"
+              src={getImagePath("Logo.png")}
               alt="لوگوی رعد گستر سهند"
               className="h-14 w-14 object-contain"
             />
+
             <div>
               <h2 className="text-base font-extrabold text-white">
                 رعد گستر سهند
@@ -168,6 +175,7 @@ export default function MobileNavbar() {
                     strokeWidth={1.7}
                     className={active ? "text-orange-400" : "text-slate-200"}
                   />
+
                   <span className={`text-sm ${active ? "font-bold" : ""}`}>
                     {item.title}
                   </span>
@@ -181,6 +189,7 @@ export default function MobileNavbar() {
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
                 <Headset size={23} strokeWidth={1.7} />
               </div>
+
               <div>
                 <p className="text-sm font-bold text-white">
                   نیاز به مشاوره دارید؟
@@ -223,7 +232,9 @@ export default function MobileNavbar() {
                   {active && (
                     <span className="absolute top-0 h-0.5 w-8 rounded-full bg-orange-500" />
                   )}
+
                   <Icon size={22} strokeWidth={active ? 2.2 : 1.7} />
+
                   <span className="text-[10px] font-medium">{title}</span>
                 </Link>
               );
